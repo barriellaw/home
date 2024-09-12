@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+        <title>Barriella Wertheimer</title>
+        <link rel="stylesheet" href="index.css">
+	    <link rel="stylesheet" href="../menu-nav/menu.css">
+        <script src="index.js"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="/b-logo.png">
+        <link rel="icon" type="image/x-icon" href="/b-logo.ico">
+
+        <script type="application/ld+json">
+            {
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "url": "https://www.barriellawertheimer.com",
+              "logo": "https://www.barriellawertheimer.com/images/b-logo.png",
+              "additionalImage": {
+                "@type": "ImageObject",
+                "url": "https://www.barriellawertheimer.com/images/b-logo.ico"
+              }
+            }
+            </script>
+            
+            
+        <meta property="og:image" content="https://www.barriellawertheimer.com/images/b-logo.ico">
+        <meta property="og:image:type" content="image/ico">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+
+        <meta property="og:image" content="https://www.barriellawertheimer.com/images/b-logo.png">
+        <meta property="og:image:type" content="image/png">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">               
+    </head>
+
+    <body>
+        <div id="mobile-warning-popup" class="popup">
+            <div class="popup-content">
+                <span class="close-btn" onclick="closePopup()">&times;</span>
+                <p>Warning: This site is best viewed on a desktop browser.</p>
+                <button id="close-btn" onclick="closePopup()"
+                >Close</button>
+            </div>
+        </div>
+
+        <div id="under-construction-popup" class="popup">
+            <div class="popup-content">
+                <span class="close-btn" onclick="closeUnderConstructionPopup()">&times;</span>
+                <p>Warning: This site is still under construction.</p>
+                <img src="/Images/under-construction.jpg" alt="Under Construction">
+                <button id="under-construction-close-btn" onclick="closeUnderConstructionPopup()">Close</button>
+            </div>
+        </div>        
+
+        <div id="menu-container"></div>
+
+        <div id="page-txt">
+            <h1>About me</h1>
+            <p>Hi, my name is Barriella Wertheimer, a web development enthusiast with a background in psychology. I’ve been learning HTML and CSS and have a solid grasp of the fundamentals, while also working on improving my JavaScript and Python skills. I enjoy coding because it allows me to be creative while solving problems in unique ways. Currently, I’m exploring both front-end and UX design, and I’m excited to see how these skills come together in my projects.</p>
+            <p>In addition to web development, I’ve been working as a certified peer specialist and CASAC-T, helping individuals navigate challenges with substance use. However, I’m shifting my focus toward tech as I’ve found it aligns more with my skills and interests. I’m still exploring where I want to go next in my tech career, but I’m enjoying the process of learning and growing.</p>
+            <p>Feel free to explore my projects, and if you’d like to connect, don’t hesitate to reach out!"</p>
+        </div>
+
+        <br> 
+        <div id="footer-container"></div>
+
+        <script>
+            fetch('/menu-nav/menu-footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    const menuHTML = new DOMParser().parseFromString(data, 'text/html');
+                    
+                    // Insert menu into the #menu-container
+                    document.getElementById('menu-container').innerHTML = menuHTML.querySelector('nav').outerHTML;
+                    
+                    // Insert footer into the #footer-container
+                    document.getElementById('footer-container').innerHTML = menuHTML.querySelector('footer').outerHTML;
+
+                    // Load the menu.js script
+                    const script = document.createElement('script');
+                    script.src = 'menu-nav/menu.js';
+                    document.body.appendChild(script);
+                });
+        </script>
+    </body>
+</html>
