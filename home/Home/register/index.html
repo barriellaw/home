@@ -3,8 +3,8 @@
     <head>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
         <title>Barriella Wertheimer</title>
-        <link rel="stylesheet" href="home.css">
-	    <link rel="stylesheet" href="../menu-nav/menu.css">
+        <link rel="stylesheet" href="index.css">
+	    <link rel="stylesheet" href="/menu-nav/menu.css">
         <script src="index.js"></script>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,54 +37,34 @@
     </head>
 
     <body>
-        <!-- Menu at the top -->
         <div id="menu-container"></div>
 
-        <!-- Page content -->
-        <section>
-            <div>
-                <div class="hero-body">
-                    <h1 class="title">Frontend Developer, Designer and Career Coach</h1>
-                    <h2 class="subtitle">I love designing and coding beautiful, simple websites</h2>
-                    <img class="avatar" src="./images/avatar.webp" alt="Barriella Wertheimer standing by a brick wall and smiling to the camera">
-                </div>
-            </div>
-            <div class="hero-foot">
-                <img src="./images/hero-devices.jpg">
-            </div>
-        </section>
+        <div class="login-container">
+            <div class="login-box">
+                <h2>Register</h2>
+                <form>
+                    <label for="name">Name</label>
+                    <input type="name" id="name" name="name" placeholder="Enter your name" required>
 
-        <section class="cen-body">
-            <h3>Hi, I'm Barriella. Nice to meet you!</h3>
-            <p>Welcome to my personal website! I’m a passionate web developer with a growing portfolio of projects, currently diving deep into HTML, CSS, and JavaScript. I enjoy building creative, user-friendly applications and continuously improving my skills. Check out my latest projects and blog posts to follow my journey!</p>
-            
-        </section>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
 
-        <div class="background-section">
-            <div class="bg-container">
-                <div class="card">
-                    <p>👩‍💻</p>
-                    <h2>Frontend Developer</h2>
-                    <p>"I enjoy coding from the ground up and bringing concepts to life directly in the browser."</p>
-                </div>
-                <div class="card">
-                    <p>🎨</p>
-                    <h2>Designer</h2>
-                    <p>"I prioritize clear content organization, streamlined design, and intentional user interactions."</p>
-                </div>
-                <div class="card">
-                    <p>💼</p>
-                    <h2>Career Coach</h2>
-                    <p>"I am passionate about supporting individuals in their career growth and thrive on helping them refine their skills and achieve their professional goals."</p>
-                </div>
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Choose a password" required>
+                    <button type="submit">Login</button>
+                    <p>Already have an account?</p>
+                    <p>Login <a href="/Login/index.html"><span><em>here</em></span></a></p>
+                </form>
             </div>
         </div>
 
-        <!-- Footer at the bottom -->
-        <div id="footer-container"></div>
+        <br>
+
+        <div>
+            <div id="footer-container"></div>
 
         <script>
-            fetch('/menu-nav/menu-footer.html')
+            fetch('/Home/menu-nav/menu-footer.html')
                 .then(response => response.text())
                 .then(data => {
                     const menuHTML = new DOMParser().parseFromString(data, 'text/html');
@@ -101,5 +81,6 @@
                     document.body.appendChild(script);
                 });
         </script>
+        </div>
     </body>
 </html>

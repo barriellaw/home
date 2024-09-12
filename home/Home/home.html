@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+        <title>Barriella Wertheimer</title>
+        <link rel="stylesheet" href="home.css">
+	    <link rel="stylesheet" href="../Home/menu-nav/menu.css">
+        <script src="index.js"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="/b-logo.png">
+        <link rel="icon" type="image/x-icon" href="/b-logo.ico">
+
+        <script type="application/ld+json">
+            {
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "url": "https://www.barriellawertheimer.com",
+              "logo": "https://www.barriellawertheimer.com/images/b-logo.png",
+              "additionalImage": {
+                "@type": "ImageObject",
+                "url": "https://www.barriellawertheimer.com/images/b-logo.ico"
+              }
+            }
+            </script>
+            
+            
+        <meta property="og:image" content="https://www.barriellawertheimer.com/images/b-logo.ico">
+        <meta property="og:image:type" content="image/ico">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+
+        <meta property="og:image" content="https://www.barriellawertheimer.com/images/b-logo.png">
+        <meta property="og:image:type" content="image/png">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">               
+    </head>
+
+    <body>
+        <!-- Menu at the top -->
+        <div id="menu-container"></div>
+
+        <!-- Page content -->
+        <section>
+            <div>
+                <div class="hero-body">
+                    <h1 class="title">Frontend Developer, Designer and Career Coach</h1>
+                    <h2 class="subtitle">I love designing and coding beautiful, simple websites</h2>
+                    <img class="avatar" src="./images/avatar.webp" alt="Barriella Wertheimer standing by a brick wall and smiling to the camera">
+                </div>
+            </div>
+            <div class="hero-foot">
+                <img src="./images/hero-devices.jpg">
+            </div>
+        </section>
+
+        <section class="cen-body">
+            <h3>Hi, I'm Barriella. Nice to meet you!</h3>
+            <p>Welcome to my personal website! I’m a passionate web developer with a growing portfolio of projects, currently diving deep into HTML, CSS, and JavaScript. I enjoy building creative, user-friendly applications and continuously improving my skills. Check out my latest projects and blog posts to follow my journey!</p>
+            
+        </section>
+
+        <div class="background-section">
+            <div class="bg-container">
+                <div class="card">
+                    <p>👩‍💻</p>
+                    <h2>Frontend Developer</h2>
+                    <p>"I enjoy coding from the ground up and bringing concepts to life directly in the browser."</p>
+                </div>
+                <div class="card">
+                    <p>🎨</p>
+                    <h2>Designer</h2>
+                    <p>"I prioritize clear content organization, streamlined design, and intentional user interactions."</p>
+                </div>
+                <div class="card">
+                    <p>💼</p>
+                    <h2>Career Coach</h2>
+                    <p>"I am passionate about supporting individuals in their career growth and thrive on helping them refine their skills and achieve their professional goals."</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer at the bottom -->
+        <div id="footer-container"></div>
+
+        <script>
+            fetch('/Home/menu-nav/menu-footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    const menuHTML = new DOMParser().parseFromString(data, 'text/html');
+                    
+                    // Insert menu into the #menu-container
+                    document.getElementById('menu-container').innerHTML = menuHTML.querySelector('nav').outerHTML;
+                    
+                    // Insert footer into the #footer-container
+                    document.getElementById('footer-container').innerHTML = menuHTML.querySelector('footer').outerHTML;
+
+                    // Load the menu.js script
+                    const script = document.createElement('script');
+                    script.src = 'menu-nav/menu.js';
+                    document.body.appendChild(script);
+                });
+        </script>
+    </body>
+</html>

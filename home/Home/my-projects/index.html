@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+        <title>Barriella Wertheimer</title>
+        <link rel="stylesheet" href="index.css">
+	    <link rel="stylesheet" href="../menu-nav/menu.css">
+        <script src="projects.js"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="/b-logo.png">
+        <link rel="icon" type="image/x-icon" href="/b-logo.ico">
+
+        <script type="application/ld+json">
+            {
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "url": "https://www.barriellawertheimer.com",
+              "logo": "https://www.barriellawertheimer.com/images/b-logo.png",
+              "additionalImage": {
+                "@type": "ImageObject",
+                "url": "https://www.barriellawertheimer.com/images/b-logo.ico"
+              }
+            }
+            </script>
+            
+            
+        <meta property="og:image" content="https://www.barriellawertheimer.com/images/b-logo.ico">
+        <meta property="og:image:type" content="image/ico">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+
+        <meta property="og:image" content="https://www.barriellawertheimer.com/images/b-logo.png">
+        <meta property="og:image:type" content="image/png">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">               
+    </head>
+
+    <body>
+        <div id="mobile-warning-popup" class="popup">
+            <div class="popup-content">
+                <span class="close-btn" onclick="closePopup()">&times;</span>
+                <p>Warning: This site is best viewed on a desktop browser.</p>
+                <button id="close-btn" onclick="closePopup()">Close</button>
+            </div>
+        </div>
+        
+        <div id="menu-container"></div>
+
+        <div id="projects">
+            <div>
+                <p><a href="https://www.barriellawertheimer.com/password-generator">Password Generator</p>
+                    <img src="../Images/Password-generator.png">
+                </a>
+            </div>
+            <div>
+                <p><a href="https://www.barriellawertheimer.com/Random-Quote-Generator">Random Quote Generator</p>
+                    <img src="../Images/quote-generator.png">
+                </a>
+            </div>
+        </div>
+
+            <div>
+                <p>Please click <a href="https://www.barriellawertheimer.com/contact-me/"><strong>here</strong></a> to submit suggestions.</p>
+            </div>
+
+            <br> 
+            <div id="footer-container"></div>
+
+        <script>
+            fetch('/Home/menu-nav/menu-footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    const menuHTML = new DOMParser().parseFromString(data, 'text/html');
+                    
+                    // Insert menu into the #menu-container
+                    document.getElementById('menu-container').innerHTML = menuHTML.querySelector('nav').outerHTML;
+                    
+                    // Insert footer into the #footer-container
+                    document.getElementById('footer-container').innerHTML = menuHTML.querySelector('footer').outerHTML;
+
+                    // Load the menu.js script
+                    const script = document.createElement('script');
+                    script.src = 'menu-nav/menu.js';
+                    document.body.appendChild(script);
+                });
+        </script>
+        </div>
+    </body>
+</html>

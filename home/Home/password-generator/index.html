@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+        <title>Barriella Wertheimer</title>
+        <link rel="stylesheet" href="index.css">
+	    <link rel="stylesheet" href="../menu-nav/menu.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="/b-logo.png">
+        <link rel="icon" type="image/x-icon" href="/b-logo.ico">
+
+        <script type="application/ld+json">
+            {
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "url": "https://www.barriellawertheimer.com",
+              "logo": "https://www.barriellawertheimer.com/images/b-logo.png",
+              "additionalImage": {
+                "@type": "ImageObject",
+                "url": "https://www.barriellawertheimer.com/images/b-logo.ico"
+              }
+            }
+            </script>
+            
+            
+        <meta property="og:image" content="https://www.barriellawertheimer.com/images/b-logo.ico">
+        <meta property="og:image:type" content="image/ico">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+
+        <meta property="og:image" content="https://www.barriellawertheimer.com/images/b-logo.png">
+        <meta property="og:image:type" content="image/png">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">               
+    </head>
+    
+    <body>
+        <div id="menu-container"></div>
+
+
+        <div class="container">
+            <div>
+                <h1><div id="h1-1">Generate a </div><div id="h1-2"><span word-wrap: break-word;></span> random password</div></h1>
+                <p id="p1">Never use an insecure password again!</p>
+                <p>Generate a random password of 4 to 25 characters</p>
+            </div>
+
+            <div class="pass-mod">
+                <label for="password-length">Password Length</label>
+                <input type="number" id="password-length" min="6" max="30" placeholder="12">
+            </div>
+
+            <div class="pass-mod">
+                <input type="checkbox" id="include-symbols">
+                <label for="include-symbols">Include Symbols</label>
+            </div>
+
+            <div class="pass-mod">
+                <input type="checkbox" id="include-numbers">
+                <label for="include-numbers">Include Numbers</label>
+            </div>
+
+            <div class="btn-container">
+                <button id="generate-btn">Generate password</button>
+                <div class="password-field" id="password-display"></div>
+                <button id="copy-btn">Copy to Clipboard</button>
+            </div>
+        </div>
+        <div id="footer-container"></div>
+
+        <script>
+            fetch('/Home/menu-nav/menu-footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    const menuHTML = new DOMParser().parseFromString(data, 'text/html');
+                    
+                    // Insert menu into the #menu-container
+                    document.getElementById('menu-container').innerHTML = menuHTML.querySelector('nav').outerHTML;
+                    
+                    // Insert footer into the #footer-container
+                    document.getElementById('footer-container').innerHTML = menuHTML.querySelector('footer').outerHTML;
+
+                    // Load the menu.js script
+                    const script = document.createElement('script');
+                    script.src = 'menu-nav/menu.js';
+                    document.body.appendChild(script);
+                });
+        </script>
+        <script src="index.js"></script>
+    </body>
+    </html>
+    
