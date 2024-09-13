@@ -67,7 +67,7 @@ nav ul li a {
   transition: color 0.3s, background-color 0.3s;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1280px) {
   .navbar {
     justify-content: flex-start;
   }
@@ -133,7 +133,7 @@ nav ul li:hover .submenu {
   display: none;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1280px) {
   .navbar {
     background-color: #ffffff;
     flex-direction: row;
@@ -282,62 +282,9 @@ nav ul li:hover .submenu {
   
 }
 
-body {
-  background-color: #ffffff;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-  font-family: 'Roboto', sans-serif;
-  text-align: center;
-  color: black;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-h1, h2, h3 {
-  font-family: 'Montserrat', sans-serif;
-}
-
-
-
 a {
   color: #746c5f;
   text-decoration: none;
-}
-
-#message {
-  position: absolute;
-  top: 20px;
-  left: 30px;
-  text-align: left;
-  max-width: 30%;
-  color: #0a0a0a;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: bold;
-}
-
-.message {
-  position: absolute;
-  bottom: 20px;
-  right: 30px;
-  text-align: left;
-  max-width: 30%;
-  color: #0a0a0a;
-  font-family: 'Roboto', sans-serif;
-}
-
-.quote {
-  text-align: center;
-  color: #FFA500;
-  max-width: 400px;
-  width: 100%;
-  margin: 10px auto;
-  border: 5px solid #1f1d1d;
-  border-radius: 50px;
-  background-color: #333532;
-  padding: 10px;
 }
 
 img {
@@ -345,7 +292,7 @@ img {
   height: auto;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1280px) {
   .block {
       height: auto;
       padding: 10px;
