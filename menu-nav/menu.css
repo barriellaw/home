@@ -197,7 +197,7 @@ nav ul li:hover .submenu {
       cursor: pointer;
       text-align: right;
       font-size: 2em;
-      margin: 10px;
+      margin: 0;
       align-self: flex-end;
       z-index: 1000;
       width: 30px;
