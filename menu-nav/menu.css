@@ -345,3 +345,41 @@ img {
       padding: 5px;
   }
 }
+
+@media screen and (min-width: 1280px) {
+  #foot {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: center;
+  }
+
+  #foot-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  #address h5 {
+    margin-bottom: 10px;
+  }
+  
+  #foot-left, #foot-center, #foot-right {
+    flex: 1;
+  }
+  
+  #linkedin, #merit, #address {
+    margin-bottom: 20px;
+  }
+  
+  #linkedin img, #merit img {
+    display: block;
+    margin: 10px auto;
+  }
+  
+  #address {
+    text-align: center;
+  }
+  
+}
