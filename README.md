@@ -22,7 +22,7 @@ If you'd like to view or modify this project locally:
 1. Clone the repository:
    ```bash
    git clone https://github.com/barriellaw/home.git
-   Open the index.html file in your browser or use a local server to view the site.
+2. Open the index.html file in your browser or use a local server to view the site.
 
 ## Usage
 Feel free to explore the site, view the projects, or read the blog posts.
