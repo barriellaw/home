@@ -22,3 +22,13 @@ If you'd like to view or modify this project locally:
 1. Clone the repository:
    ```bash
    git clone https://github.com/barriellaw/home.git
+   Open the index.html file in your browser or use a local server to view the site.
+
+## Usage
+Feel free to explore the site, view the projects, or read the blog posts.
+
+## License
+This project is for personal use. All content, code, and images are owned by me, Barriella Wertheimer. No public use or reproduction without permission.
+
+## Contact
+If you'd like to get in touch, you can reach me through LinkedIn https://www.linkedin.com/in/barriella-wertheimer/ or via email at mail@barriellawertheimer.com.
