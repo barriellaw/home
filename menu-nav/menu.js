@@ -14,7 +14,7 @@ function closePopup() {
 
 document.addEventListener("DOMContentLoaded", function() {
     showMobileWarning();
-});
+})
 
 function toggleMenu() {
     const navbar = document.querySelector('.navbar');
@@ -23,14 +23,15 @@ function toggleMenu() {
         navbar.classList.toggle('active');
         toggleBtn.classList.toggle('active');
     }
-};
+}
 
-document.addEventListener("DOMContentLoaded", function () {
+window.addEventListener("pageshow", function () {
     const menu = document.querySelector('.navbar');
     const toggleButton = document.querySelector('.toggle-btn');
 
-    if (menu.classList.contains('open')) {
-        menu.classList.remove('open');
+    if (menu.classList.contains('active')) {
+        menu.classList.remove('active');
+        toggleButton.classList.remove('active');
     }
 
     toggleButton.setAttribute('aria-expanded', false);
