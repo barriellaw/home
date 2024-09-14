@@ -1,7 +1,7 @@
 # Personal Website
 
 ## Overview
-This is the codebase for my personal website, Barriella Wertheimer (https://www.barriellawertheimer.com). It serves as a portfolio to showcase my web development projects and blog posts.
+This is the codebase for my personal website, Barriella Wertheimer https://www.barriellawertheimer.com. It serves as a portfolio to showcase my web development projects and blog posts.
 
 ## Features
 - **Home Page**: Introduction to my work and background.
