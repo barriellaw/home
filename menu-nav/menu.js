@@ -26,10 +26,10 @@ function toggleMenu() {
 };
 
 document.addEventListener("DOMContentLoaded", function () {
-    const menu = document.querySelector('.menu-container');
+    const menu = document.querySelector('.navbar');
     const toggleButton = document.querySelector('.toggle-btn');
 
-    if (menu.classList.contains(open)) {
+    if (menu.classList.contains('open')) {
         menu.classList.remove('open');
     }
 
