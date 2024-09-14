@@ -24,3 +24,14 @@ function toggleMenu() {
         toggleBtn.classList.toggle('active');
     }
 };
+
+document.addEventListener("DOMContentLoaded", function () {
+    const menu = document.querySelector('.menu-container');
+    const toggleButton = document.querySelector('.toggle-btn');
+
+    if (menu.classList.contains(open)) {
+        menu.classList.remove('open');
+    }
+
+    toggleButton.setAttribute('aria-expanded', false);
+})
