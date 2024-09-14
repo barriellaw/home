@@ -25,6 +25,22 @@ function toggleMenu() {
     }
 }
 
+document.querySelectorAll('#nav-items a').forEach(link => {
+    link.addEventListener('click', function() {
+        const menu = document.querySelector('.navbar');
+    const toggleButton = document.querySelector('.toggle-btn');
+
+    if (menu.classList.contains('active')) {
+        menu.classList.remove('active');
+        toggleButton.classList.remove('active');
+    }
+    
+    toggleButton.setAttribute('aria-expanded', false);
+
+    });
+
+});
+
 window.addEventListener("pageshow", function () {
     const menu = document.querySelector('.navbar');
     const toggleButton = document.querySelector('.toggle-btn');
@@ -35,4 +51,4 @@ window.addEventListener("pageshow", function () {
     }
 
     toggleButton.setAttribute('aria-expanded', false);
-})
+});
