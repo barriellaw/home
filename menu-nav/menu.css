@@ -2,12 +2,11 @@
   box-sizing: border-box;
 }
 
-.nav-container {
-  border: 2px solid red;
+body {
+  position: sticky;
 }
 
 .navbar {
-  position: sticky;
   display: flex;
   justify-content: space-between;
   top: 0;
@@ -206,7 +205,7 @@ nav ul li:hover .submenu {
       font-size: 2em;
       margin: 0;
       align-self: flex-end;
-      z-index: 1000;
+      z-index: 999;
       width: 30px;
       height: 24px;
       transition: background-color 0.3s ease;
