@@ -3,15 +3,14 @@
 }
 
 .nav-container {
-  position: sticky;
-  top: 0;
-  z-index: 999;
   border: 2px solid red;
 }
 
 .navbar {
+  position: sticky;
   display: flex;
   justify-content: space-between;
+  top: 0;
   align-items: center;
   background-color: #f1f1f1;
   padding: 10px 20px;
@@ -70,6 +69,7 @@ nav ul li a {
 @media (max-width: 1280px) {
   .navbar {
     justify-content: flex-start;
+    position: sticky;
   }
 
   nav ul {
@@ -135,6 +135,7 @@ nav ul li:hover .submenu {
 
 @media screen and (max-width: 1280px) {
   .navbar {
+    position: sticky;
     background-color: #ffffff;
     flex-direction: row;
     width: 100%;
