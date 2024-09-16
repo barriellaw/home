@@ -11,12 +11,18 @@
   display: flex;
   justify-content: space-between;
   top: 0;
+  overflow: hidden;
   align-items: center;
   background-color: #f1f1f1;
   padding: 10px 20px;
   border-radius: 50px;
   max-width: 100%;
   z-index: 999;
+}
+
+.navbar a {
+  float: left;
+  display: block;
 }
 
 .logo {
