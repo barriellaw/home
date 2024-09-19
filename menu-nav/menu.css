@@ -4,17 +4,21 @@
 
 body {
   position: sticky;
+  margin-top: 150px;
 }
 
 .navbar {
   display: flex;
   justify-content: space-between;
   top: 0;
+  position: fixed;
+  left: 0;
+  width: 100%;
   overflow: hidden;
   align-items: center;
-  background-color: #f1f1f1;
+  background-color: white;
   padding: 10px 20px;
-  border-radius: 50px;
+  border-radius: 5px;
   max-width: 100%;
   z-index: 1001;
 }
@@ -27,8 +31,13 @@ body {
 .logo {
   color: #FFA500;
   margin-bottom: auto;
-  padding-top: 20px;
   margin-right: 20px;
+  position: relative;
+  left: 20px;
+  top: 10px;
+  z-index: 999;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 .logo img {
@@ -36,7 +45,6 @@ body {
 }
 
 .nav {
-  background-color: #ffffff;
   margin: 20px;
   padding: 5px;
 }
@@ -80,25 +88,19 @@ nav ul li a:hover {
 
 @media screen and (max-width: 1280px) {
   .navbar {
-    position: sticky;
-    background-color: #ffffff;
-    flex-direction: row;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    background-color: white;
   }
 
   .navbar #nav-items {
     position: fixed;
-    top: 140px;
+    top: 120px;
     right: 0;
     height: 80%;
-    width: 70%;
+    width: 100%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: white;
     z-index: 1000;
     padding: 20px;
     transform: translateX(100%);
@@ -118,7 +120,7 @@ nav ul li a:hover {
 
   nav ul li {
     width: 100%;
-    padding: 10px 0;
+    padding: 0;
   }
 
   .toggle-btn {
@@ -126,7 +128,6 @@ nav ul li a:hover {
     right: 20px;
     top: 50px;
     display: block;
-    background-color: transparent;
     padding: 10px;
     border: none;
     border-radius: 5px;
