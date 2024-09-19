@@ -94,7 +94,7 @@ nav ul li a:hover {
 
   .navbar #nav-items {
     position: fixed;
-    top: 0;
+    top: 140px;
     right: 0;
     height: 100%;
     width: 70%;
@@ -220,7 +220,245 @@ nav ul li a:hover {
 
 a {
   color: #746c5f;
+  text-decoration: none;* {
+  box-sizing: border-box;
+}
+
+body {
+  position: sticky;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  top: 0;
+  overflow: hidden;
+  align-items: center;
+  background-color: #f1f1f1;
+  padding: 10px 20px;
+  border-radius: 50px;
+  max-width: 100%;
+  z-index: 1001;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+}
+
+.logo {
+  color: #FFA500;
+  background-color: #eef3f2;
+  border: #0a0a0a 1px;
+  border-radius: 40px;
+  margin-bottom: auto;
+  padding-top: 20px;
+  margin-right: 20px;
+}
+
+.logo img {
+  max-width: 150px;
+}
+
+.nav {
+  background-color: #ffffff;
+  margin: 20px;
+  padding: 5px;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-start;
+  flex-grow: 1;
+  flex-wrap: nowrap;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  max-width: 100%;
+}
+
+nav ul li {
+  flex: 1;
+  text-align: center;
+  margin-right: 0px;
+  padding-right: 20px;
+}
+
+nav ul li a {
+  white-space: nowrap;
+  color: #746c5f;
+  padding: 10px 15px;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: #4d4a47;
+  color: #fff;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.toggle-btn {
+  display: none;
+}
+
+@media screen and (max-width: 1280px) {
+  .navbar {
+    position: sticky;
+    background-color: #ffffff;
+    flex-direction: row;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* Menu appears below the navbar */
+  .navbar #nav-items {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.95);
+    z-index: 1000;
+    max-height: 0; /* Initially hidden */
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+  }
+
+  /* When the menu is active, it expands down */
+  .navbar.active #nav-items {
+    max-height: 500px; /* Adjust this value based on content height */
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav ul li {
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  /* Position the toggle button on the right */
+  .toggle-btn {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    display: block;
+    background-color: transparent;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: #333;
+    cursor: pointer;
+    font-size: 2em;
+    z-index: 999;
+    width: 30px;
+    height: 24px;
+    transition: background-color 0.3s ease;
+  }
+
+  .toggle-btn::before, 
+  .toggle-btn::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    left: 0;
+    transition: transform 0.3s ease, top 0.3s ease, opacity 0.3s ease;
+  }
+
+  .toggle-btn::before {
+    top: 0px;
+  }
+
+  .toggle-btn::after {
+    top: 20px;
+  }
+
+  .toggle-btn .middle-line {
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    top: 10px;
+    left: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .toggle-btn.active::before, .toggle-btn.active::after {
+    background-color: #333;
+  }
+
+  .toggle-btn.active::before {
+    transform: rotate(45deg);
+    top: 10px;
+  }
+
+  .toggle-btn.active::after {
+    transform: rotate(-45deg);
+    top: 10px;
+  }
+
+  .toggle-btn.active .middle-line {
+    opacity: 0;
+  }
+
+  .toggle-btn.active {
+    background-color: #8bbdb2;
+    color: white;
+    transform: rotate(0deg);
+    padding: 12px;
+  }
+
+  .menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 998;
+  }
+
+  .menu-overlay.visible {
+    display: block;
+  }
+
+  .logo {
+    margin-left: 10px;
+  }
+}
+
+a {
+  color: #746c5f;
   text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.linkedin {
+  height: 21px;
+}
+
+@media screen and (max-width: 480px) {
+  .navbar.active #nav-items {
+    padding: 5px;
+  }
+}
+
 }
 
 img {

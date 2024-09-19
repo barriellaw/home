@@ -24,13 +24,13 @@ function toggleMenu() {
     if (navbar && toggleBtn) {
         navbar.classList.toggle('active');
         toggleBtn.classList.toggle('active');
-
         menuOverlay.classList.toggle('visible');
 
         const isExpanded = toggleBtn.classList.contains('active');
         toggleBtn.setAttribute('aria-expanded', isExpanded ? 'true' : 'false');
     }
 }
+
 
 document.querySelectorAll('#nav-items a').forEach(link => {
     link.addEventListener('click', function() {
