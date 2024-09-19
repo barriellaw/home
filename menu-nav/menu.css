@@ -16,7 +16,7 @@ body {
   padding: 10px 20px;
   border-radius: 50px;
   max-width: 100%;
-  z-index: 999;
+  z-index: 1001;
 }
 
 .navbar a {
@@ -49,7 +49,6 @@ nav ul {
   display: flex;
   justify-content: flex-start;
   flex-grow: 1;
-  list-style-type: none;
   flex-wrap: nowrap;
   padding: 0;
   margin: 0;
@@ -71,67 +70,11 @@ nav ul li a {
   transition: color 0.3s, background-color 0.3s;
 }
 
-@media (max-width: 1280px) {
-  .navbar {
-    justify-content: flex-start;
-    position: sticky;
-  }
-
-  nav ul {
-    display: flex;
-    justify-content: flex-start;
-    overflow-x: auto;
-    white-space: nowrap;
-    flex-grow: 1;
-    padding: 0;
-    margin: 0;
-  }
-
-  nav ul li {
-    flex: 0 0 auto;
-    padding-right: 20px;
-    padding: 5px;
-  }
-
-  nav ul li a {
-    font-size: 0.9rem;
-  }
-
-  .logo {
-    text-align: center;
-    margin-bottom: 10px;
-  }
-}
-
-nav ul li:last-child {
-  margin-right: 0;
-}
-
-nav ul li a {
-  color: #746c5f;
-  padding: 10px 15px;
-  transition: color 0.3s, background-color 0.3s;
-}
-
 nav ul li a:hover {
   background-color: #4d4a47;
   color: #fff;
   border-radius: 5px;
   transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-nav ul .submenu {
-  display: none;
-  position: absolute;
-  left: 0;
-  top: 100%;
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-nav ul li:hover .submenu {
-  display: block;
 }
 
 .toggle-btn {
@@ -150,65 +93,55 @@ nav ul li:hover .submenu {
   }
 
   .navbar #nav-items {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      display: none;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      width: 200%;
-      background-color: rgba(255, 255, 255, 0.95);
-      z-index: 999;
-      padding: 20px;
-      transform: translateX(100%);
-      transition: transform 0.3s ease-in-out;
-  }
-
-  nav ul {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-  }
-
-  nav ul li {
-      width: 100%;
-      padding: 10px 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 70%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.95);
+    z-index: 1000;
+    padding: 20px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
   }
 
   .navbar.active #nav-items {
-      display: flex;
-      top: 0;
-      transform: translateX(0);
+    transform: translateX(0);
   }
 
-  .navbar #nav-items li {
-      width: 100%;
-      margin: 10px 0;
-      padding: 15px 0;
-      text-align: center;
-      background-color: transparent;
-      border-radius: 5px;
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav ul li {
+    width: 100%;
+    padding: 10px 0;
   }
 
   .toggle-btn {
-      position: relative;
-      display: block;
-      background-color: transparent;
-      padding: 10px;
-      border: none;
-      border-radius: 5px;
-      color: #333;
-      cursor: pointer;
-      text-align: right;
-      font-size: 2em;
-      margin: 0;
-      align-self: flex-end;
-      z-index: 999;
-      width: 30px;
-      height: 24px;
-      transition: background-color 0.3s ease;
+    position: fixed;
+    right: 20px;
+    top: 50px;
+    display: block;
+    background-color: transparent;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: #333;
+    cursor: pointer;
+    text-align: right;
+    font-size: 2em;
+    margin: 0;
+    align-self: flex-end;
+    z-index: 999;
+    width: 30px;
+    height: 24px;
+    transition: background-color 0.3s ease;
   }
 
   .toggle-btn::before, 
@@ -245,12 +178,12 @@ nav ul li:hover .submenu {
   }
 
   .toggle-btn.active::before {
-    transform: rotate(75deg);
+    transform: rotate(45deg);
     top: 10px;
   }
 
   .toggle-btn.active::after {
-    transform: rotate(15deg);
+    transform: rotate(-45deg);
     top: 10px;
   }
 
@@ -261,9 +194,7 @@ nav ul li:hover .submenu {
   .toggle-btn.active {
     background-color: #8bbdb2;
     color: white;
-    position: relative;
-    transform: rotate(45deg);
-    transition: transform 0.3 ease-in-out;
+    transform: rotate(0deg);
     padding: 12px;
   }
 
@@ -278,14 +209,13 @@ nav ul li:hover .submenu {
     z-index: 998;
   }
 
-  .navbar.active + .menu-overlay {
+  .menu-overlay.visible {
     display: block;
   }
 
   .logo {
     margin-left: 10px;
   }
-  
 }
 
 a {
@@ -302,90 +232,8 @@ img {
   height: 21px;
 }
 
-@media screen and (max-width: 1280px) {
-  .block {
-      height: auto;
-      padding: 10px;
-  }
-
-  h1, h2, h3 {
-      font-size: 1.8em;
-  }
-
-  p, .quote {
-      font-size: 1em;
-      padding: 5px;
-  }
-
-  #message, #name {
-      position: relative;
-      max-width: 100%;
-  }
-
-  .navbar {
-      flex-direction: column;
-      align-items: flex-start;
-  }
-
-  .navbar.active #nav-items {
-      flex-direction: column;
-      width: 100%;
-  }
-}
-
 @media screen and (max-width: 480px) {
-  .block {
-      padding: 5px;
-  }
-
-  h1, h2, h3 {
-      font-size: 1.5em;
-  }
-
-  p, .quote {
-      font-size: 0.9em;
-      padding: 5px;
-  }
-
   .navbar.active #nav-items {
-      padding: 5px;
+    padding: 5px;
   }
-}
-
-@media screen and (min-width: 1280px) {
-  #foot {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    text-align: center;
-  }
-
-  #foot-right {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  #address h5 {
-    margin-bottom: 10px;
-  }
-  
-  #foot-left, #foot-center, #foot-right {
-    flex: 1;
-  }
-  
-  #linkedin, #merit, #address {
-    margin-bottom: 20px;
-  }
-  
-  #linkedin img, #merit img {
-    display: block;
-    margin: 10px auto;
-  }
-  
-  #address {
-    text-align: center;
-  }
-  
 }
