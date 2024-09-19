@@ -33,15 +33,15 @@ body {
   margin-bottom: auto;
   margin-right: 20px;
   position: relative;
-  left: 20px;
+  left: 10px;
   top: 10px;
   z-index: 999;
   padding: 10px;
-  border-radius: 5px;
 }
 
 .logo img {
   max-width: 150px;
+  border-radius: 50px;
 }
 
 .nav {
@@ -116,6 +116,7 @@ nav ul li a:hover {
     display: flex;
     flex-direction: column;
     width: 100%;
+    border: #464040 3px solid;
   }
 
   nav ul li {
