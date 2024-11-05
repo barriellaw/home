@@ -61,16 +61,36 @@ window.addEventListener("pageshow", function () {
 });
 
     // Store the original title
-    const originalTitle = document.title;
+    const messages = [
+        "👋 Don't miss my latest projects!",
+        "💻 Building something awesome!",
+        "🚀 Ready to launch your next project?",
+        "👀 Come back to see more cool stuff!",
+        "💡 Need a website? Let’s connect!",
+        "🌐 Crafting web magic!",
+        "⚡️ Skills that bring ideas to life!",
+        "📈 Ready to take your site to the next level?",
+        "🔧 Coding solutions just for you!",
+        "🎉 New project alert! Check it out!",
+        "✨ Turning ideas into code!",
+        "📬 Let's collaborate on something great!",
+        "🌈 Creativity meets functionality!"
+      ];
 
-    // Set up an event listener for visibility change
+    let titleInterval;
+    let messageIndex = 0;
+
+    // Event listener for visibility change
     document.addEventListener("visibilitychange", function() {
-      // Check if the page is hidden
       if (document.hidden) {
-        // Change the title when the page is hidden
-        document.title = "Hurry, codes are not writing itself!";
+        // Start an interval to switch messages every second when the tab is hidden
+        titleInterval = setInterval(() => {
+          document.title = messages[messageIndex];
+          messageIndex = (messageIndex + 1) % messages.length; // Move to the next message, looping back to the start
+        }, 1000); // Change every 1 second (adjust as needed)
       } else {
-        // Revert to the original title when the page is visible again
+        // Clear the interval and restore the original title when the tab is visible again
+        clearInterval(titleInterval);
         document.title = originalTitle;
       }
     });
