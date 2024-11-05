@@ -59,3 +59,18 @@ window.addEventListener("pageshow", function () {
 
     toggleButton.setAttribute('aria-expanded', false);
 });
+
+    // Store the original title
+    const originalTitle = document.title;
+
+    // Set up an event listener for visibility change
+    document.addEventListener("visibilitychange", function() {
+      // Check if the page is hidden
+      if (document.hidden) {
+        // Change the title when the page is hidden
+        document.title = "Hurry, codes are not writing itself!";
+      } else {
+        // Revert to the original title when the page is visible again
+        document.title = originalTitle;
+      }
+    });
