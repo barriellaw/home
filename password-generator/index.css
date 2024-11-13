@@ -132,6 +132,10 @@ p {
     text-shadow: #333;
 }
 
+input[type="checkbox"] {
+    accent-color: #1f8d04;
+}
+
 .pass-mod {
     padding-bottom: 10px;
     width: 100%;
