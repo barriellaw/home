@@ -84,7 +84,7 @@ window.addEventListener("pageshow", function () {
         titleInterval = setInterval(() => {
           document.title = messages[messageIndex];
           messageIndex = (messageIndex + 1) % messages.length;
-        }, 5000);
+        }, 3000);
       } else {
         clearInterval(titleInterval);
         document.title = originalTitle;
