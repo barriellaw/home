@@ -84,6 +84,17 @@ body {
     margin: 0;
 }
 
+.main-body {
+    background-image: url();
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .container {
     background-color: #a19696;
     padding: 20px;
