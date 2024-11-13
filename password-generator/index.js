@@ -37,6 +37,8 @@ function generatePassword() {
     const passwordLength = parseInt(document.getElementById("password-length").value);
     const includeSymbols = document.getElementById("include-symbols").checked;
     const includeNumbers = document.getElementById("include-numbers").checked;
+    const includeUppercase = document.getElementById("include-upper").checked;
+    const includeLowercase = document.getElementById("include-lower").checked;
     
     if (isNaN(passwordLength) || passwordLength < 4) {
         alert("Error: Password length must be between 4 and 25 characters.");
@@ -48,7 +50,7 @@ function generatePassword() {
         return;
     }
 
-    let availableCharacters = [...upperCase, ...lowerCase];
+    let availableCharacters = [];
 
     if (includeNumbers) {
         availableCharacters = availableCharacters.concat(numbers)
@@ -56,6 +58,12 @@ function generatePassword() {
     if (includeSymbols) {
         availableCharacters = availableCharacters.concat(symbols)
     }
+    if (includeUppercase) {
+        availableCharacters = availableCharacters.concat(upperCase);
+    }
+    if (includeLowercase) {
+        availableCharacters = availableCharacters.concat(lowerCase);
+    }    
 
     let password = "";
     for (let i = 0; i < passwordLength; i++) {
