@@ -32,6 +32,20 @@ const numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
 const symbols = ["~","`","!","@","#","$","%","^","&","*","(",")","_","-","+","=","{","[","}","]",",","|",":",";","<",">",".","?",
 "/"]
 
+const checkboxes = document.querySelectorAll('#include-upper, #include-lower, #include-symbols, #include-numbers');
+
+checkboxes.forEach((checkbox) => {
+    checkbox.addEventListener('change', () => {
+        const checkedBoxes = Array.from(checkboxes).filter((box) => box.checked);
+        
+        // If there is only one checkbox checked, prevent it from being unchecked
+        if (checkedBoxes.length === 0) {
+            checkbox.checked = true;
+            alert("At least one character type must be selected for password generation.");
+        }
+    });
+});
+
 
 function generatePassword() {
     const passwordLength = parseInt(document.getElementById("password-length").value);
