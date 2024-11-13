@@ -41,7 +41,7 @@ checkboxes.forEach((checkbox) => {
         // If there is only one checkbox checked, prevent it from being unchecked
         if (checkedBoxes.length === 0) {
             checkbox.checked = true;
-            alert("At least one character type must be selected for password generation.");
+            
         }
     });
 });
