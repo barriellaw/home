@@ -238,3 +238,31 @@ img {
     padding: 5px;
   }
 }
+
+#footer-container {
+  background-color: #f9f9f9;
+  padding: 20px;
+}
+
+#foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+#foot-left {
+  flex: 1;
+  text-align: left;
+}
+
+#foot-center {
+  flex: 1;
+  text-align: center;
+}
+
+#foot-right {
+  flex: 1;
+  text-align: right;
+}
+
