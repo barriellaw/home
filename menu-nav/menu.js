@@ -60,7 +60,6 @@ window.addEventListener("pageshow", function () {
     toggleButton.setAttribute('aria-expanded', false);
 });
 
-    // Store the original title
     const messages = [
         "👋 Don't miss my latest projects!",
         "💻 Building something awesome!",
@@ -80,16 +79,13 @@ window.addEventListener("pageshow", function () {
     let titleInterval;
     let messageIndex = 0;
 
-    // Event listener for visibility change
     document.addEventListener("visibilitychange", function() {
       if (document.hidden) {
-        // Start an interval to switch messages every second when the tab is hidden
         titleInterval = setInterval(() => {
           document.title = messages[messageIndex];
-          messageIndex = (messageIndex + 1) % messages.length; // Move to the next message, looping back to the start
-        }, 1000); // Change every 1 second (adjust as needed)
+          messageIndex = (messageIndex + 1) % messages.length;
+        }, 5000);
       } else {
-        // Clear the interval and restore the original title when the tab is visible again
         clearInterval(titleInterval);
         document.title = originalTitle;
       }
