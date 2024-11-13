@@ -59,8 +59,8 @@ function generatePassword() {
         return;
     }
 
-    if (passwordLength > 25) {
-        alert("Error: Password length must be between 4 and 25 characters.");
+    if (passwordLength > 30) {
+        alert("Error: Password length must be between 4 and 30 characters.");
         return;
     }
 
