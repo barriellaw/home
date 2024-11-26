@@ -21,6 +21,22 @@ function toggleMenu() {
     navbar.classList.toggle('active');
 };
 
+document.addEventListener("DOMContentLoaded", () => {
+    const signupForm = document.getElementById("signup-form");
+    signupForm.addEventListener("submit", async (e) => {
+        // Your signup code
+    });
+
+    // Similarly, add event listeners for loginForm and logoutButton
+});
+
+
+import { auth } from "./firebase.js";
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-auth.js";
+
+// Existing signup, login, and logout code remains unchanged
+
+
 // Signup Function
 const signupForm = document.getElementById('signup-form');
 signupForm.addEventListener('submit', async (e) => {
