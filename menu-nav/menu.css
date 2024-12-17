@@ -164,6 +164,13 @@ nav ul li a:hover {
     padding: 0;
   }
 
+  .submenu {
+    left: 50%;
+    transform: translate(-50%);
+    width: auto;
+    min-width: 50%;
+  }
+
   .toggle-btn {
     position: fixed;
     right: 20px;
