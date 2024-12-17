@@ -14,7 +14,6 @@ body {
   position: fixed;
   left: 0;
   width: 100%;
-  overflow: hidden;
   align-items: center;
   background-color: white;
   padding: 10px 20px;
@@ -80,6 +79,47 @@ nav ul li a:hover {
   color: #fff;
   border-radius: 5px;
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.has-submenu {
+  position: relative;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #444;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  min-width: 200px;
+  z-index: 10001;
+}
+
+.submenu li {  
+  padding: 2px 7px;
+  color: white;
+  white-space: nowrap;
+}
+
+.submenu li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease;
+}
+
+.submenu li a:hover {
+  background-color: #555;
+  color: #fff;
+}
+
+.has-submenu:hover .submenu {
+    display: block;
 }
 
 .toggle-btn {
