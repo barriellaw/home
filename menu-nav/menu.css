@@ -126,7 +126,7 @@ nav ul li a:hover {
   display: none;
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 768px) {
   .navbar {
     background-color: white;
   }
@@ -135,7 +135,7 @@ nav ul li a:hover {
     position: fixed;
     top: 120px;
     right: 0;
-    height: 85%;
+    height: 87%;
     width: 100%;
     flex-direction: column;
     align-items: center;
