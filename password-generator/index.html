@@ -54,65 +54,69 @@
             <br>
 
             <div class="checkbox">
-                <!-- <div class="pass-mod">
-                    <label for="select-all">
-                        <input type="checkbox" id="select-all" /> Select All
-                    </label>
-                </div> -->
+                    <!-- <div class="pass-mod">
+                        <label for="select-all">
+                            <input type="checkbox" id="select-all" /> Select All
+                        </label>
+                    </div> -->
 
-            <div class="checkbox">
-                <div class="pass-mod">
-                    <label for="include-upper">
-                        <input type="checkbox" class="item" id="include-upper" checked /> Include Uppercase
-                    </label>
-                </div>
                 
-                <div class="pass-mod">
-                    <label for="include-lower">
-                        <input type="checkbox" class="item" id="include-lower" > Include Lowercase
-                    </label>
-                </div>
+                    <div class="pass-mod">
+                        <label for="include-upper">
+                            <input type="checkbox" class="item" id="include-upper" checked /> Include Uppercase
+                        </label>
+                    </div>
+                
+                    <div class="pass-mod">
+                        <label for="include-lower">
+                            <input type="checkbox" class="item" id="include-lower" > Include Lowercase
+                        </label>
+                    </div>
     
-                <div class="pass-mod">
-                    <label for="include-numbers">
-                        <input type="checkbox" class="item" id="include-numbers" /> Include Numbers
-                    </label>
-                </div>
+                    <div class="pass-mod">
+                        <label for="include-numbers">
+                            <input type="checkbox" class="item" id="include-numbers" /> Include Numbers
+                        </label>
+                    </div>
     
-                <div class="pass-mod">
-                    <label for="include-symbols">
-                        <input type="checkbox" class="item" id="include-symbols" /> Include Symbols
-                    </label>
-                </div>
+                    <div class="pass-mod">
+                        <label for="include-symbols">
+                            <input type="checkbox" class="item" id="include-symbols" /> Include Symbols
+                        </label>
+                    </div>
     
-                <div class="btn-container">
-                    <button id="generate-btn">Generate password</button>
-                    <div class="password-field" id="password-display"></div>
-                    <button id="copy-btn">Copy to Clipboard</button>
-                </div>
-            </div>
+                    <div class="btn-container">
+                        <button id="generate-btn">Generate password</button>
+                        <div class="password-field" id="password-display"></div>
+                        <button id="copy-btn">Copy to Clipboard</button>
+                    </div>
+            </div>    
         </div>
-        <div id="footer-container"></div>
+        
 
-        <script>
-            fetch('/menu-nav/menu-footer.html')
-                .then(response => response.text())
-                .then(data => {
-                    const menuHTML = new DOMParser().parseFromString(data, 'text/html');
-                    
-                    // Insert menu into the #menu-container
-                    document.getElementById('menu-container').innerHTML = menuHTML.querySelector('nav').outerHTML;
-                    
-                    // Insert footer into the #footer-container
-                    document.getElementById('footer-container').innerHTML = menuHTML.querySelector('footer').outerHTML;
-
-                    // Load the menu.js script
-                    const script = document.createElement('script');
-                    script.src = 'menu-nav/menu.js';
-                    document.body.appendChild(script);
-                });
-        </script>
-        <script src="index.js"></script>
+       <footer>
+        <div id="footer-container">
+            <script>
+                fetch('/menu-nav/menu-footer.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        const menuHTML = new DOMParser().parseFromString(data, 'text/html');
+                        
+                        // Insert menu into the #menu-container
+                        document.getElementById('menu-container').innerHTML = menuHTML.querySelector('nav').outerHTML;
+                        
+                        // Insert footer into the #footer-container
+                        document.getElementById('footer-container').innerHTML = menuHTML.querySelector('footer').outerHTML;
+    
+                        // Load the menu.js script
+                        const script = document.createElement('script');
+                        script.src = 'menu-nav/menu.js';
+                        document.body.appendChild(script);
+                    });
+            </script>
+            <script src="index.js"></script>
+        </div>
+       </footer>
     </body>
-    </html>
+</html>
     
