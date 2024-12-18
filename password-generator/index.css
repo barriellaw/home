@@ -3,76 +3,6 @@ body {
     text-align: center;
 }
 
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #f1f1f1;
-    padding: 10px 20px;
-    border-radius: 50px;
-}
-
-.logo {
-    color: #FFA500;
-    
-}
-
-.nav {
-    background-color: #ddd;
-    margin: 20px;
-    padding: 5px;
-}
-
-nav ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: space-between;
-    padding: 0;
-    margin: 0 auto;
-    width: 100%;
-    max-width: 100%;
-}
-
-nav ul li {
-    position: relative;
-    margin-right: 50px;
-    padding-right: 10px;
-}
-
-nav ul li:last-child {
-    margin-right: 0;
-}
-
-nav ul .submenu {
-    display: none;
-    position: absolute;
-    left: 0;
-    top: 100%;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-nav ul li:hover .submenu {
-    display: block;
-}
-
-nav ul .submenu li {
-    background-color: #f9f9f9;
-    margin: 0;
-}
-
-nav ul .submenu li a {
-    display: block;
-    padding: 8px 12px;
-    color: #333;
-    text-decoration: none;
-}
-
-nav ul .submenu li a:hover {
-    background-color: #ddd;
-}
-
 body {
     background-color: #f4f4f4;
     font-family: "europa", sans-serif;
@@ -114,6 +44,9 @@ footer {
     margin-top: 20px;
 }
 
+.checkbox {
+    text-align: left;
+}
 
 h1 {
     font-family: "Karla", sans-serif;
@@ -134,8 +67,9 @@ h1 {
 }
 
 p {
-    color: #3fc21e;
+    color: #2b691b;
     font-family: "inter", sans-serif;
+    font-weight: bold;
 }
 
 #p1 {

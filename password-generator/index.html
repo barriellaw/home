@@ -48,35 +48,37 @@
 
             <div class="pass-mod">
                 <label for="password-length">Password Length</label>
-                <input type="number" id="password-length" min="6" max="30" placeholder="12" value="12">
+                <input type="number" id="password-length" min="6" max="30" value="12" />
             </div>
 
             <br>
 
-            <div class="pass-mod">
-                <input type="checkbox" id="include-upper" checked>
-                <label for="include-upper">Include Uppercase</label>
-            </div>
-            
-            <div class="pass-mod">
-                <input type="checkbox" id="include-lower" checked>
-                <label for="include-lower">Include Lowercase</label>
-            </div>
-
-            <div class="pass-mod">
-                <input type="checkbox" id="include-numbers" checked>
-                <label for="include-numbers">Include Numbers</label>
-            </div>
-
-            <div class="pass-mod">
-                <input type="checkbox" id="include-symbols" checked>
-                <label for="include-symbols">Include Symbols</label>
-            </div>
-
-            <div class="btn-container">
-                <button id="generate-btn">Generate password</button>
-                <div class="password-field" id="password-display"></div>
-                <button id="copy-btn">Copy to Clipboard</button>
+            <div class="checkbox">
+                <div class="pass-mod">
+                    <input type="checkbox" id="include-upper" checked />
+                    <label for="include-upper">Include Uppercase</label>
+                </div>
+                
+                <div class="pass-mod">
+                    <input type="checkbox" id="include-lower" >
+                    <label for="include-lower">Include Lowercase</label>
+                </div>
+    
+                <div class="pass-mod">
+                    <input type="checkbox" id="include-numbers" />
+                    <label for="include-numbers">Include Numbers</label>
+                </div>
+    
+                <div class="pass-mod">
+                    <input type="checkbox" id="include-symbols" />
+                    <label for="include-symbols">Include Symbols</label>
+                </div>
+    
+                <div class="btn-container">
+                    <button id="generate-btn">Generate password</button>
+                    <div class="password-field" id="password-display"></div>
+                    <button id="copy-btn">Copy to Clipboard</button>
+                </div>
             </div>
         </div>
         <div id="footer-container"></div>
