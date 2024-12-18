@@ -98,6 +98,23 @@ nav ul li a:hover {
   z-index: 10001;
 }
 
+.arrow, .back-btn {
+  cursor: pointer;
+  font-weight: bold;
+  color: #333;
+}
+
+.arrow {
+  margin-left: 10px;
+}
+
+.back-btn {
+  display: block;
+  margin-bottom: 10px;
+  color: blue;
+  text-decoration: none;
+}
+
 .submenu li {  
   padding: 2px 7px;
   color: white;
@@ -111,6 +128,18 @@ nav ul li a:hover {
   width: 100%;
   box-sizing: border-box;
   transition: background-color 0.3s ease;
+}
+
+.has-submenu:hover,
+.has-submenu:focus,
+.has-submenu.active {
+  background-color: #555;
+  color: #fff;
+}
+
+.has-submenu:hover .submenu ,
+.submenu:hover {
+  background-color: #333;
 }
 
 .submenu li a:hover {

@@ -60,6 +60,29 @@ window.addEventListener("pageshow", function () {
     toggleButton.setAttribute('aria-expanded', false);
 });
 
+function openSubMenu(event) {
+    event.preventDefault();
+    const subMenu = document.getElementById("submenu");
+    subMenu.style.display = "block";
+
+    const navItems = document.getElementById("nav-items");
+    navItems.querySelectorAll("li").forEach(item => {
+        if (!item.classList.contains("has-submenu")) {
+            item.style.display = "none";
+        }
+    });
+}
+
+function closeSubMenu() {
+    const subMenu = document.getElementById("submenu");
+    subMenu.style.display = "none";
+
+    const navItems = document.getElementById("nav-items");
+    navItems.querySelectorAll("li").forEach(item =>{
+        item.style.display = "block";
+    })
+}
+
     const messages = [
         "👋 Don't miss my latest projects!",
         "💻 Building something awesome!",

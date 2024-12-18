@@ -47,12 +47,21 @@
                 <ul class="menu" id="nav-items">
                     <li><a href="https://www.barriellawertheimer.com">Home </a></li>
                     <li><a href="/about-me/index.html">About </a></li>
-                    <li class="has-submenu"><a href="">My projects</a>
-                        <ul class="submenu">
+
+                    <li class="has-submenu"><a href="">My projects
+                        <span class="arrow" onclick="openSubMenu(event)">➤</span>
+                    </a>
+                        <ul class="submenu" id="submenu">
+                            <li>
+                                <a href="#" class="back-btn" onclick="closeSubMenu()"> ← </a>
+                            </li>
                             <li><a href="/password-generator/index.html">Password Generator</a></li>
                             <li><a href="/random-quote-generator/index.html">Quote Generator</a></li>
-                        </ul>
+                            <li><a href=>Timer</a></li>
+                            <li><a href="">Stop Watch</a></li>
+                            <li><a href="">To-Do list</a></li>
                     </li>
+                        </ul>
                     <li><a href="/Blog/index.html">Blog </a></li>
                     <li><a href="/Contact-Me/index.html">Contact </a></li>
                     <li><a href="/booking/index.html">Book With Me </a></li>
