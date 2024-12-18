@@ -90,7 +90,7 @@ nav ul li a:hover {
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #555;
+  background-color: #fff;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -122,7 +122,7 @@ nav ul li a:hover {
 }
 
 .submenu li a {
-  color: white;
+  color: #555;
   text-decoration: none;
   display: block;
   width: 100%;
@@ -133,13 +133,7 @@ nav ul li a:hover {
 .has-submenu:hover,
 .has-submenu:focus,
 .has-submenu.active {
- /* background-color: #555;*/
-  color: #fff;
-}
-
-.has-submenu:hover .submenu ,
-.submenu:hover {
-  background-color: #555;
+  color: #555;
 }
 
 .submenu li a:hover {
