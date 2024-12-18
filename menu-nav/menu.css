@@ -70,7 +70,7 @@ nav ul li {
 nav ul li a {
   white-space: nowrap;
   color: #746c5f;
-  padding: 10px 10px;
+  padding: 10px 100px;
   transition: color 0.3s, background-color 0.3s;
 }
 
@@ -90,7 +90,7 @@ nav ul li a:hover {
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #444;
+  background-color: #555;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -101,7 +101,7 @@ nav ul li a:hover {
 .arrow, .back-btn {
   cursor: pointer;
   font-weight: bold;
-  color: #333;
+  color: #555;
 }
 
 .arrow {
@@ -139,7 +139,7 @@ nav ul li a:hover {
 
 .has-submenu:hover .submenu ,
 .submenu:hover {
-  background-color: #333;
+  background-color: #555;
 }
 
 .submenu li a:hover {
